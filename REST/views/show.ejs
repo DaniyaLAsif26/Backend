@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.name %> Quote</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Quotes.org</h1>
+    <div class="quotes">
+        <h3> <%= post.name %></h3>
+        <p> <%= post.quote %></p>
+        <div class="line"></div>
+    </div>
+    <a class="add" href="http://localhost:8080/posts">&larr; Back</a>
+</body>
+</html>

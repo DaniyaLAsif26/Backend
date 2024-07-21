@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes.org - Motivate yourself</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Quotes.org</h1>
+   <% for(quote of quotes){ %>
+        <div class="quotes">
+            <h3> <%= quote.name %></h3>
+            <p> <%= quote.quote %></p>
+            <div class="buttons">
+                <a href="http://localhost:8080/posts/<%=quote.id%>" class="first">See Quote</a>
+                <a href="http://localhost:8080/posts/<%=quote.id%>/edit" class="second">Edit Quote</a>
+                <form  method="post"  action="/posts/<%=quote.id%>?_method=DELETE" >
+                    <button class="delete-btn">Delete</button>
+                </form>
+            </div>
+            <div class="line"></div>
+        </div>
+    <% } %>
+
+    
+    <a class="add" href="http://localhost:8080/posts/new">Add a Quote</a>
+</body>
+</html>
